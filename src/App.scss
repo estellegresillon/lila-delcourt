@@ -1,0 +1,165 @@
+header {
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 13vh;
+  color: #fff;
+  align-items: center;
+  justify-content: space-around;
+  opacity: 0;
+  animation: 1s fadeInHome;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+
+  .logo-link {
+    border: 1px solid rgba(255,255,255,0.5);
+    padding: 10px 25px;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+
+  .menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    text-align: center;
+    font-size: 13px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+    .underline {
+      margin-top: 5px;
+      border-top: 1px solid transparent;
+      width: 0px;
+    }
+
+    &:hover {
+      .underline {
+        border-top: 1px solid #fff;
+        animation: 1s underline;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+}
+
+.hero-scene {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  color: #fff;
+
+  .overline {
+    background: rgba(0,0,0,0.2);
+    padding: 0 10px;
+  }
+
+  .title {
+    position: absolute;
+    z-index: 1;
+    font-size: 42px;
+    opacity: 0;
+    animation: 2s fadeInHome;
+    animation-fill-mode: forwards;
+    width: 60%;
+    text-align: center;
+  }
+
+  i {
+    position: absolute;
+    z-index: 1;
+    font-size: 24px;
+    animation: 2s cursorTap infinite;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.2);
+    padding: 18px 25px;
+  }
+}
+
+.section-presentation {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .presentation-left {
+    width: 20%;
+    font-size: 42px;
+    text-align: right;
+    border-right: 1px solid red;
+    padding-right: 40px;
+  }
+
+  .presentation-right {
+    width: 50%;
+
+    .separator {
+      width: 50px;
+      border-top: 1px solid gray;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.section-photos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 60vh;
+  width: 70%;
+  margin-left: 30%;
+
+  .photo-left, .photo-right {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@keyframes cursorTap {
+  from {
+    bottom: 4.5vh;
+  }
+  20% {
+    bottom: 3vh;
+  }
+  40% {
+    bottom: 4.5vh;
+  }
+  60% {
+    bottom: 3vh;
+  }
+  80% {
+    bottom: 4.5vh;
+  }
+  to {
+    bottom: 4.5vh;
+  }
+}
+
+@keyframes fadeInHome {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes underline {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50px;
+  }
+}
