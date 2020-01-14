@@ -31,13 +31,12 @@ const App = () => {
 
       <div className="section-presentation">
         <div className="presentation-left">
-          We don't trust words, we trust pictures.
+          I don't trust words, I trust pictures.
         </div>
         <div className="presentation-right">
           <div className="separator" />
-          I do not know what I may appear to the world, but to myself I seem to have been only like a boy
-          playing on the seashore, and diverting myself in now and then finding a smoother pebble or a prettier
-          shell than ordinary, whilst the great ocean of truth lay all undiscovered before me.
+          The camera is a sketch book, an instrument of intuition and spontaneity.
+          When words become unclear, I shall focus with photographs. When images become inadequate, I shall be content with silence.
         </div>
       </div>
 
@@ -56,9 +55,11 @@ const App = () => {
 
       <div className="section-presentation">
         <div className="presentation-center">
-          I do not know what I may appear to the world, but to myself I seem to have been only like a boy
-          playing on the seashore, and diverting myself in now and then finding a smoother pebble or a prettier
-          shell than ordinary, whilst the great ocean of truth lay all undiscovered before me.
+          You don't make a photograph just with a camera.
+          You bring to the act of photography all the pictures you have seen, the books you have read,
+          the music you have heard, the people you have loved.
+          When you photograph people in color, you photograph their clothes.
+          But when you photograph people in Black and white, you photograph their souls!
         </div>
       </div>
     </>
