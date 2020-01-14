@@ -140,17 +140,18 @@ header {
   }
 }
 
-.fullscreen-img {
-  height: 100vh;
-  width: 100%;
-  object-fit: cover;
-  overflow: hidden;
-  // margin-top: 0%;
+.parallax {
+  /* The image used */
+  background-image: url("/project1-min.jpg");
 
-  img {
-    width: 100%;
-    height: auto;
-  }
+  /* Set a specific height */
+  height: 50vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @keyframes cursorTap {

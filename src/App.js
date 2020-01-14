@@ -8,7 +8,6 @@ const App = () => {
       <header>
         <div className="logo-link">
           Romain Delcourt
-          <div className="underline" />
         </div>
         <div className="menu-item galery-link">
           Projects
@@ -49,9 +48,7 @@ const App = () => {
         </div>
       </div>
 
-      <div className="fullscreen-img">
-        <img src="/project1-min.jpg" alt="project1" />
-      </div>
+      <div className="parallax" />
 
       <div className="section-presentation">
         <div className="presentation-center">
