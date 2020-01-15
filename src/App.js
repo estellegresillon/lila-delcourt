@@ -19,16 +19,16 @@ const App = () => {
         </div>
       </header>
 
-      <div className="hero-scene">
+      <section className="hero-scene">
         <div className="title">Hello, I am a photographer based in <span className="overline">Paris</span>
           . I am inspired by <span className="overline">nature</span> and traveling around the <span className="overline">world</span>.</div>
         <i className="fas fa-long-arrow-alt-down" />
         <video muted loop autoPlay id="myVideo">
           <source src="home4.mp4" type="video/mp4" />
         </video>
-      </div>
+      </section>
 
-      <div className="section-presentation">
+      <section className="section-presentation">
         <div className="presentation-left">
           I don't trust words, I trust pictures.
         </div>
@@ -37,20 +37,20 @@ const App = () => {
           The camera is a sketch book, an instrument of intuition and spontaneity.
           When words become unclear, I shall focus with photographs. When images become inadequate, I shall be content with silence.
         </div>
-      </div>
+      </section>
 
-      <div className="section-photos">
+      <section className="section-photos">
         <div className="photo-left">
           <img src="hero1.jpg" alt="nature-left" />
         </div>
         <div className="photo-right">
           <img src="hero2.jpg" alt="nature-right" />
         </div>
-      </div>
+      </section>
 
       <div className="parallax" />
 
-      <div className="section-presentation">
+      <section className="section-presentation">
         <div className="presentation-center">
           You don't make a photograph just with a camera.
           You bring to the act of photography all the pictures you have seen, the books you have read,
@@ -58,7 +58,8 @@ const App = () => {
           When you photograph people in color, you photograph their clothes.
           But when you photograph people in Black and white, you photograph their souls!
         </div>
-      </div>
+      </section>
+      <footer><div className="logo-link">Romain Delcourt</div></footer>
     </>
   );
 }
