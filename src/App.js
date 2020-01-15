@@ -4,20 +4,20 @@ import { Waypoint } from 'react-waypoint';
 import './App.scss';
 
 const PROJECTS = [
-  { name: "Project 1", className: "project1" },
-  { name: "Project 2", className: "project2" },
-  { name: "Project 3", className: "project3" },
-  { name: "Project 4", className: "project4" },
-  { name: "Project 5", className: "project5" },
-  { name: "Project 6", className: "project6" },
-  { name: "Project 7", className: "project7" },
-  { name: "Project 8", className: "project8" },
-  { name: "Project 9", className: "project9" },
+  { name: "Golden peaks", className: "golden-peaks" },
+  { name: "Wild West", className: "wild-west" },
+  { name: "Jellove", className: "jellove" },
+  { name: "Razor edges", className: "razor-edges" },
+  { name: "volcano", className: "volcano" },
+  { name: "vanity", className: "vanity" },
+  { name: "BLOG", className: "about" },
+  { name: "CONTACT", className: "about" },
+  { name: "ABOUT", className: "about" },
 ];
 
 const App = () => {
   const [showPortfolio, setShowPortfolio] = useState(false);
-  const [portfolioImage, setSPortfolioImage] = useState("project2");
+  const [portfolioImage, setSPortfolioImage] = useState("about");
 
   const handleWaypointEnter = (div) => {
     const el = document.querySelector(div);
@@ -43,7 +43,9 @@ const App = () => {
           style={{ backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("${portfolioImage}-min.jpg")` }} 
           className="portfolio-gallery">
           <div className="close-gallery">
-            <i onClick={() => setShowPortfolio(false)} className="fas fa-times" />
+            <svg onClick={() => setShowPortfolio(false)} width="24" height="24" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd">
+              <path d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z"/>
+            </svg>
           </div>
           {PROJECTS.map(project => {
             return (
@@ -51,7 +53,7 @@ const App = () => {
                 className={`portfolio-item ${project.className}`}
                 key={project.name}
                 onMouseEnter={() => setSPortfolioImage(project.className)}
-                onMouseLeave={() => setSPortfolioImage("project2")}
+                onMouseLeave={() => setSPortfolioImage("about")}
               >
                 {project.name}
               </div>
