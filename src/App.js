@@ -40,6 +40,7 @@ const App = () => {
             return (
               <div
                 className={`portfolio-item ${project.className}`}
+                key={project.name}
                 onMouseEnter={() => setSPortfolioImage(project.className)}
                 onMouseLeave={() => setSPortfolioImage("project2")}
               >
