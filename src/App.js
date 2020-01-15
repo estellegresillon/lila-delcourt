@@ -107,7 +107,7 @@ const App = () => {
             onEnter={() => handleWaypointEnter(".img-photo-left")}
             onLeave={() => handleWaypointLeave(".img-photo-left")}
           >
-            <img className="img-photo-left" src="hero1.jpg" alt="nature-left" />
+            <img rel="preload" className="img-photo-left" src="hero1.jpg" alt="nature-left" />
           </Waypoint>
         </div>
         <div className="photo-right">
@@ -115,7 +115,7 @@ const App = () => {
             onEnter={() => handleWaypointEnter(".img-photo-right")}
             onLeave={() => handleWaypointLeave(".img-photo-right")}
           >
-            <img className="img-photo-right" src="hero2.jpg" alt="nature-right" />
+            <img rel="preload" className="img-photo-right" src="hero2.jpg" alt="nature-right" />
           </Waypoint>
         </div>
       </section>
