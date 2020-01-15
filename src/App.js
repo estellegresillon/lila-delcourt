@@ -4,13 +4,13 @@ import { Waypoint } from 'react-waypoint';
 import './App.scss';
 
 const App = () => {
-  const handleWaypointEnter = () => {
-    const el = document.querySelector(".third-section");
+  const handleWaypointEnter = (div) => {
+    const el = document.querySelector(div);
     el.classList.add("transition-on");
   }
 
-  const handleWaypointLeave = () => {
-    const el = document.querySelector(".third-section");
+  const handleWaypointLeave = (div) => {
+    const el = document.querySelector(div);
     el.classList.remove("transition-on");
   }
 
@@ -40,37 +40,58 @@ const App = () => {
       </section>
 
       <section className="section-presentation">
-        <div className="presentation-left">
-          I don't trust words, I trust pictures.
-        </div>
-        <div className="presentation-right">
-          <div className="separator" />
-          The camera is a sketch book, an instrument of intuition and spontaneity.
-          When words become unclear, I shall focus with photographs. When images become inadequate, I shall be content with silence.
-        </div>
+        <Waypoint
+          onEnter={() => handleWaypointEnter(".presentation-left")}
+          onLeave={() => handleWaypointLeave(".presentation-left")}
+        >
+          <div className="presentation-left">
+            I don't trust words, I trust pictures.
+          </div>
+        </Waypoint>
+        <Waypoint
+          onEnter={() => handleWaypointEnter(".presentation-right")}
+          onLeave={() => handleWaypointLeave(".presentation-right")}
+        >
+          <div className="presentation-right">
+            <div className="separator" />
+            The camera is a sketch book, an instrument of intuition and spontaneity.
+            When words become unclear, I shall focus with photographs. When images become inadequate, I shall be content with silence.
+          </div>
+        </Waypoint>
       </section>
 
       <section className="section-photos">
         <div className="photo-left">
-          <img src="hero1.jpg" alt="nature-left" />
+          <Waypoint
+            onEnter={() => handleWaypointEnter(".img-photo-left")}
+            onLeave={() => handleWaypointLeave(".img-photo-left")}
+          >
+            <img className="img-photo-left" src="hero1.jpg" alt="nature-left" />
+          </Waypoint>
         </div>
         <div className="photo-right">
-          <img src="hero2.jpg" alt="nature-right" />
+          <Waypoint
+            onEnter={() => handleWaypointEnter(".img-photo-right")}
+            onLeave={() => handleWaypointLeave(".img-photo-right")}
+          >
+            <img className="img-photo-right" src="hero2.jpg" alt="nature-right" />
+          </Waypoint>
         </div>
       </section>
 
-      <div className="parallax" />
+      <div className="bg-img parallax" />
+
       <section className="section-presentation">
         <Waypoint
-          onEnter={() => handleWaypointEnter()}
-          onLeave={() => handleWaypointLeave()}
+          onEnter={() => handleWaypointEnter(".third-section")}
+          onLeave={() => handleWaypointLeave(".third-section")}
         >
           <div style={{}} className="presentation-center third-section">
             You don't make a photograph just with a camera.
             You bring to the act of photography all the pictures you have seen, the books you have read,
             the music you have heard, the people you have loved.
             When you photograph people in color, you photograph their clothes.
-            But when you photograph people in Black and white, you photograph their souls!
+            But when you photograph people in Black and white, you photograph their souls.
         </div>
         </Waypoint>
       </section>
