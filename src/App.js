@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Waypoint } from 'react-waypoint';
 
 import './App.scss';
 
+const PROJECTS = [
+  { name: "Project 1", className: "project1" },
+  { name: "Project 2", className: "project2" },
+  { name: "Project 3", className: "project3" },
+  { name: "Project 4", className: "project4" },
+  { name: "Project 5", className: "project5" },
+  { name: "Project 6", className: "project6" },
+  { name: "Project 7", className: "project7" },
+  { name: "Project 8", className: "project8" },
+  { name: "Project 9", className: "project9" },
+];
+
 const App = () => {
+  const [showPortfolio, setShowPortfolio] = useState(false);
+  const [portfolioImage, setSPortfolioImage] = useState("project2");
+
   const handleWaypointEnter = (div) => {
     const el = document.querySelector(div);
     el.classList.add("transition-on");
@@ -16,11 +31,29 @@ const App = () => {
 
   return (
     <>
+      {showPortfolio &&
+        <section style={{ backgroundImage: `url("${portfolioImage}-min.jpg")` }} className="portfolio-gallery">
+          <div className="close-gallery">
+            <i onClick={() => setShowPortfolio(false)} className="fas fa-times" />
+          </div>
+          {PROJECTS.map(project => {
+            return (
+              <div
+                className={`portfolio-item ${project.className}`}
+                onMouseEnter={() => setSPortfolioImage(project.className)}
+                onMouseLeave={() => setSPortfolioImage("project2")}
+              >
+                {project.name}
+              </div>
+            )
+          })}
+        </section>}
+
       <header>
         <div className="logo-link">
           Romain Delcourt
         </div>
-        <div className="menu-item galery-link">
+        <div onClick={() => setShowPortfolio(true)} className="menu-item galery-link">
           Projects
           <div className="underline" />
         </div>
