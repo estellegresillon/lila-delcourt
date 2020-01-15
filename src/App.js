@@ -31,8 +31,17 @@ const App = () => {
 
   return (
     <>
+      <div className="overlay-loading">
+        <div className="logo-link">
+          Romain Delcourt
+        </div>
+        <div className="underline" />
+      </div>
+      
       {showPortfolio &&
-        <section style={{ backgroundImage: `url("${portfolioImage}-min.jpg")` }} className="portfolio-gallery">
+        <section 
+          style={{ backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("${portfolioImage}-min.jpg")` }} 
+          className="portfolio-gallery">
           <div className="close-gallery">
             <i onClick={() => setShowPortfolio(false)} className="fas fa-times" />
           </div>
@@ -58,10 +67,6 @@ const App = () => {
           Projects
           <div className="underline" />
         </div>
-        <div className="menu-item menu-link">
-          Menu
-          <div className="underline" />
-        </div>
       </header>
 
       <section className="hero-scene">
@@ -69,7 +74,9 @@ const App = () => {
           . I am inspired by <span className="overline">nature</span> and traveling around the <span className="overline">world</span>.</div>
         <i className="fas fa-long-arrow-alt-down" />
         <video muted loop autoPlay id="myVideo">
-          <source src="home4.mp4" type="video/mp4" />
+          <source src="home4.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+          <source src="home4.webm" type='video/webm; codecs="vp8, vorbis"' />
+          <img src="/project2-min.jpg" title="Your browser does not support the <video> tag"></img>
         </video>
       </section>
 

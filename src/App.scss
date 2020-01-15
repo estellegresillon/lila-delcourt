@@ -1,3 +1,40 @@
+$red: #ff6b5c;
+$green: #0a9a72;
+$yellow: #ffba2e;
+
+.overlay-loading {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $green;
+  z-index: 2;
+  color: $yellow;
+  animation: 3s overlayFadeOut;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+
+  .logo-link {
+    font-size: 72px;
+    letter-spacing: 2px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .underline {
+    margin-top: 5px;
+    width: 0px;
+    border-top: 1px solid $yellow;
+    animation: 5s overlayUnderline;
+    animation-fill-mode: forwards;
+  }
+}
+
 .portfolio-gallery {
   position: relative;
   width: 100%;
@@ -8,7 +45,8 @@
   z-index: 3;
   background-size: cover;
   background-position: center;
-  color: white;
+  color: #fff;
+  background-color: #000;
   transition: 0.5s background-image ease;
 
   .close-gallery {
@@ -37,17 +75,22 @@ header {
   height: 13vh;
   color: #fff;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   opacity: 0;
   animation: 1s fadeInHome;
   animation-fill-mode: forwards;
-  animation-delay: 1s;
+  animation-delay: 8s;
 
   .logo-link {
     border: 1px solid rgba(255,255,255,0.5);
-    padding: 20px 25px;
+    padding: 10px 15px;
     font-size: 13px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    opacity: 1;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-left: 5vw;
+    cursor: pointer;
   }
 
   .menu-item {
@@ -91,6 +134,7 @@ header {
   .overline {
     background: rgba(0,0,0,0.2);
     padding: 0 10px;
+    font-weight: 900;
   }
 
   .title {
@@ -100,6 +144,7 @@ header {
     opacity: 0;
     animation: 2s fadeInHome;
     animation-fill-mode: forwards;
+    animation-delay: 7s;
     width: 60%;
     text-align: center;
   }
@@ -203,6 +248,23 @@ footer {
   animation: 2s fadeInHome;
   animation-delay: 0.2s;
   animation-fill-mode: forwards;
+}
+
+@keyframes overlayFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes overlayUnderline {
+  from { width: 0%; }
+  10% { width: 5% }
+  30% { width: 50% }
+  90% { width: 70% }
+  to { width: 100%; }
 }
 
 @keyframes cursorTap {

@@ -11,6 +11,6 @@ code {
 }
 
 ::selection {
-  background: red;
+  background: #ff6b5c;
   color: #fff;
 }
