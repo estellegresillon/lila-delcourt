@@ -1,10 +1,10 @@
 import React from "react";
 
-const Project = props => {
-  console.log(props)
-  
+const Project = ({ location }) => {
+  const projectName = location.pathname.substr(1);
+
   return (
-    <div>hi</div>
+    <div>{projectName}</div>
   );
 };
 

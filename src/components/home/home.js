@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Waypoint } from 'react-waypoint';
 
 import './home.scss';
 
 const Home = () => {
+  const [hasLoadedWebsite, setHasLoadedWebsite] = useState(false)
+
   const handleWaypointEnter = (div) => {
     const el = document.querySelector(div);
     el.classList.add("transition-on");
@@ -14,14 +16,26 @@ const Home = () => {
     el.classList.remove("transition-on");
   }
 
+  useEffect(() => {
+    const secondVisit = localStorage.getItem('has_loaded_website');
+    secondVisit ? setHasLoadedWebsite(true) : setHasLoadedWebsite(false);
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      localStorage.setItem('has_loaded_website', true);
+    }, 3000);
+  }, []);
+
   return (
     <>
-      <div className="overlay-loading">
-        <div className="logo-link">
-          Romain Delcourt
-        </div>
-        <div className="underline" />
-      </div>
+      {!hasLoadedWebsite &&
+        <div className="overlay-loading">
+          <div className="logo-link">
+            Romain Delcourt
+          </div>
+          <div className="underline" />
+        </div>}
 
       <section className="hero-scene">
         <div className="title">Hello, I am a photographer based in <span className="overline">Paris</span>
