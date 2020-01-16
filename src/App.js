@@ -166,6 +166,25 @@ const App = () => {
       </section>
 
       <div className="bg-img parallax second" />
+
+      <section className="section-photos-cta">
+        <div className="photo-left-cta">
+          <Waypoint
+            onEnter={() => handleWaypointEnter(".img-photo-left-cta")}
+            onLeave={() => handleWaypointLeave(".img-photo-left-cta")}
+          >
+            <img rel="preload" className="img-photo-left-cta" src="volcano-1-min.jpg" alt="nature-left" />
+          </Waypoint>
+        </div>
+        <div className="photo-right-cta">
+          <Waypoint
+            onEnter={() => handleWaypointEnter(".img-photo-right-cta")}
+            onLeave={() => handleWaypointLeave(".img-photo-right-cta")}
+          >
+            <img rel="preload" className="img-photo-right-cta" src="volcano-2-min.jpg" alt="nature-right" />
+          </Waypoint>
+        </div>
+      </section>
       <footer><div className="logo-link">© Romain Delcourt - Tous droits réservés - Mentions légales</div></footer>
     </>
   );

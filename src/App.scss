@@ -297,7 +297,7 @@ header {
   }
 
   .photo-right {
-    img { margin-left: 10%; }
+    img { margin-left: 5%; }
   }
 }
 
@@ -328,6 +328,32 @@ footer {
   height: 10vh;
   font-size: 12px;
   height: 40px;
+}
+
+.section-photos-cta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 60vh;
+  width: 60%;
+  margin: 20vh 5%;
+
+  .photo-left-cta, .photo-right-cta {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+
+    img { 
+      height: 100%;
+      width: auto;
+      opacity: 0;
+    }
+  }
+
+  .photo-right-cta {
+    img { margin-left: 5%; }
+  }
 }
 
 .transition-on {
