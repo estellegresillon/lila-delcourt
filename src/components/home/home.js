@@ -1,25 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Waypoint } from 'react-waypoint';
 
-import './App.scss';
+import './home.scss';
 
-const PROJECTS = [
-  { name: "Golden peaks", className: "golden-peaks" },
-  { name: "Wild West", className: "wild-west" },
-  { name: "Jellove", className: "jellove" },
-  { name: "Razor edges", className: "razor-edges" },
-  { name: "volcano", className: "volcano" },
-  { name: "vanity", className: "vanity" },
-  { name: "BLOG", className: "about" },
-  { name: "CONTACT", className: "about" },
-  { name: "ABOUT", className: "about" },
-];
-
-const App = () => {
-  const [showPortfolio, setShowPortfolio] = useState(false);
-  const [showPortfolioOverlay, setShowPortfolioOverlay] = useState(false);
-  const [portfolioImage, setSPortfolioImage] = useState("jellove");
-
+const Home = () => {
   const handleWaypointEnter = (div) => {
     const el = document.querySelector(div);
     el.classList.add("transition-on");
@@ -30,27 +14,6 @@ const App = () => {
     el.classList.remove("transition-on");
   }
 
-  const openMenu = () => {
-    setShowPortfolio(true)
-    setShowPortfolioOverlay(true)
-
-    setTimeout(() => {
-      setShowPortfolioOverlay(false)
-    }, 2000);
-  }
-
-  const closeMenu = () => {
-    setShowPortfolioOverlay(true)
-
-    setTimeout(() => {
-      setShowPortfolio(false)
-    }, 1000);
-
-    setTimeout(() => {
-      setShowPortfolioOverlay(false)
-    }, 2000);
-  }
-
   return (
     <>
       <div className="overlay-loading">
@@ -59,43 +22,6 @@ const App = () => {
         </div>
         <div className="underline" />
       </div>
-
-      {showPortfolioOverlay && <div className="overlay-menu" />}
-      
-      {showPortfolio &&
-        <section 
-          style={{ backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("${portfolioImage}-min.jpg")` }} 
-          className="portfolio-gallery">
-          <div onClick={() => closeMenu()} className="close-container">
-            <div className="leftright"></div>
-            <div className="rightleft"></div>
-            <label className="close">close</label>
-          </div>
-          {PROJECTS.map(project => {
-            return (
-              <div
-                className={`portfolio-item ${project.className}`}
-                key={project.name}
-                onClick={() => console.log(project.name)}
-                onMouseEnter={() => setSPortfolioImage(project.className)}
-                onMouseLeave={() => setSPortfolioImage("jellove")}
-              >
-                {project.name}
-                <div className="underline" />
-              </div>
-            )
-          })}
-        </section>}
-
-      <header>
-        <div className="logo-link">
-          Romain Delcourt
-        </div>
-        <div onClick={() => openMenu()} className="menu-item galery-link">
-          Menu
-          <div className="underline" />
-        </div>
-      </header>
 
       <section className="hero-scene">
         <div className="title">Hello, I am a photographer based in <span className="overline">Paris</span>
@@ -190,4 +116,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default Home;
