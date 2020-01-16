@@ -29,7 +29,11 @@ const Header = () => {
     }, 2000);
   };
 
-  const closeMenu = () => {
+  const closeMenu = (pathName) => {
+    if (pathName === "/") {
+      return;
+    };
+
     setShowPortfolioOverlay(true);
 
     setTimeout(() => {
@@ -72,9 +76,12 @@ const Header = () => {
         </section>}
 
       <header>
-        <div className="logo-link">
-          Romain Delcourt
-        </div>
+        <Link to="/" onClick={() => closeMenu(window.location.pathname)}>
+          <div className="logo-link">
+            Romain Delcourt
+          </div>
+        </Link>
+
         <div onClick={() => openMenu()} className="menu-item galery-link">
           Menu
           <div className="underline" />

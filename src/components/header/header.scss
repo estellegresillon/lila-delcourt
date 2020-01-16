@@ -126,8 +126,13 @@ header {
   justify-content: space-between;
   opacity: 0;
   animation: 1s fadeInHome;
-  animation-delay: 0.5s;
+  animation-delay: 0.2s;
   animation-fill-mode: forwards;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
 
   .logo-link {
     border: 1px solid rgba(255,255,255,0.5);

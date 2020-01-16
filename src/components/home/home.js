@@ -28,7 +28,7 @@ const Home = () => {
   }, []);
 
   return (
-    <>
+    <div className="layout-home">
       {!hasLoadedWebsite &&
         <div className="overlay-loading">
           <div className="logo-link">
@@ -88,7 +88,7 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="bg-img parallax first" />
+      <div className="parallax first" />
 
       <section className="section-presentation">
         <Waypoint
@@ -105,7 +105,7 @@ const Home = () => {
         </Waypoint>
       </section>
 
-      <div className="bg-img parallax second" />
+      <div className="parallax second" />
 
       <section className="section-photos-cta">
         <div className="photo-left-cta">
@@ -126,7 +126,7 @@ const Home = () => {
         </div>
       </section>
       <footer><div className="logo-link">© Romain Delcourt - Tous droits réservés - Mentions légales</div></footer>
-    </>
+    </div>
   );
 }
 

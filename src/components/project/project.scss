@@ -1,0 +1,131 @@
+$dark-green: #14292f;
+$light-green: #225b68;
+
+.layout-project {
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  margin: 0;
+
+  .section-presentation {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .presentation-left {
+      width: 25%;
+      font-size: 42px;
+      text-align: right;
+      opacity: 0;
+      font-weight: 900;
+      line-height: 42px;
+    }
+
+    .presentation-center {
+      width: 50%;
+      border-left: 1px solid gray;
+      padding-left: 40px;
+      opacity: 0;
+    }
+
+    .presentation-right {
+      width: 50%;
+      opacity: 0;
+
+      .separator {
+        width: 50px;
+        border-top: 1px solid gray;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .section-photos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 60vh;
+    width: 60%;
+    margin-left: 35%;
+    margin-bottom: 25vh;
+
+    .photo-left, .photo-right {
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
+      overflow: hidden;
+
+      img { 
+        height: 100%;
+        width: auto;
+        opacity: 0;
+      }
+    }
+
+    .photo-right {
+      img { margin-left: 5%; }
+    }
+  }
+
+  .parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.first { 
+      height: 100vh;
+    }
+    &.second { 
+      height: 70vh;
+      margin-bottom: 20px;
+    }
+  }
+
+  footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
+    font-size: 12px;
+    height: 40px;
+  }
+
+  .section-photos-cta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 60vh;
+    width: 60%;
+    margin: 20vh 5%;
+
+    .photo-left-cta, .photo-right-cta {
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
+      overflow: hidden;
+
+      img { 
+        height: 100%;
+        width: auto;
+        opacity: 0;
+      }
+    }
+
+    .photo-right-cta {
+      img { margin-left: 5%; }
+    }
+  }
+}
+
+@keyframes fadeInHome {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
