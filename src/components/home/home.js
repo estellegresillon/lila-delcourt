@@ -24,13 +24,14 @@ const Home = () => {
   useEffect(() => {
     setTimeout(() => {
       localStorage.setItem('has_loaded_website', true);
-    }, 3000);
+      setHasLoadedWebsite(true);
+    }, 5000);
   }, []);
 
   return (
     <div className="layout-home">
       {!hasLoadedWebsite &&
-        <div className="overlay-loading">
+        <div style={{ display: hasLoadedWebsite ? "none" : "flex" }} className="overlay-loading">
           <div className="logo-link">
             Romain Delcourt
           </div>

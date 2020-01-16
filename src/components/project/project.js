@@ -19,7 +19,7 @@ const Project = ({ location }) => {
 
   return (
     <div className="layout-project">
-      <div className="parallax first" style={{backgroundImage: `url('${projectName}-min.jpg')`}} />
+      <div className="parallax first" style={{ backgroundImage: `url('${projectName}-min.jpg')` }} />
 
       <section className="section-presentation">
         <Waypoint
@@ -51,7 +51,7 @@ const Project = ({ location }) => {
         </div>
       </section>
 
-      <div className="parallax second" style={{backgroundImage: `url('${projectName}-3-min.jpg')`}} />
+      <div className="parallax second" style={{ backgroundImage: `url('${projectName}-3-min.jpg')` }} />
 
       <footer><div className="logo-link">© Romain Delcourt - Tous droits réservés - Mentions légales</div></footer>
     </div>
