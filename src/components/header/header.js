@@ -21,25 +21,25 @@ const Header = () => {
   const [portfolioImage, setSPortfolioImage] = useState("jellove");
 
   const openMenu = () => {
-    setShowPortfolio(true)
-    setShowPortfolioOverlay(true)
+    setShowPortfolio(true);
+    setShowPortfolioOverlay(true);
 
     setTimeout(() => {
-      setShowPortfolioOverlay(false)
+      setShowPortfolioOverlay(false);
     }, 2000);
-  }
+  };
 
   const closeMenu = () => {
-    setShowPortfolioOverlay(true)
+    setShowPortfolioOverlay(true);
 
     setTimeout(() => {
-      setShowPortfolio(false)
+      setShowPortfolio(false);
     }, 1000);
 
     setTimeout(() => {
-      setShowPortfolioOverlay(false)
+      setShowPortfolioOverlay(false);
     }, 2000);
-  }
+  };
 
   return (
     <>
@@ -56,12 +56,13 @@ const Header = () => {
           </div>
           {PROJECTS.map(project => {
             return (
-              <Link key={project.name} onClick={() => closeMenu()} to={project.className}>
-                <div
-                  className={`portfolio-item ${project.className}`}
-                  onMouseEnter={() => setSPortfolioImage(project.className)}
-                  onMouseLeave={() => setSPortfolioImage("jellove")}
-                >
+              <Link 
+                key={project.name}
+                onClick={() => closeMenu()}
+                to={project.className}
+                onMouseEnter={() => setSPortfolioImage(project.className)}
+              >
+                <div className={`portfolio-item ${project.className}`}>
                   {project.name}
                   <div className="underline" />
                 </div>
