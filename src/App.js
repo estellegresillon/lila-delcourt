@@ -55,7 +55,7 @@ const App = () => {
     <>
       <div className="overlay-loading">
         <div className="logo-link">
-          Lila Delcourt
+          Romain Delcourt
         </div>
         <div className="underline" />
       </div>
@@ -76,6 +76,7 @@ const App = () => {
               <div
                 className={`portfolio-item ${project.className}`}
                 key={project.name}
+                onClick={() => console.log(project.name)}
                 onMouseEnter={() => setSPortfolioImage(project.className)}
                 onMouseLeave={() => setSPortfolioImage("jellove")}
               >
@@ -88,7 +89,7 @@ const App = () => {
 
       <header>
         <div className="logo-link">
-          Lila Delcourt
+          Romain Delcourt
         </div>
         <div onClick={() => openMenu()} className="menu-item galery-link">
           Menu
@@ -163,7 +164,7 @@ const App = () => {
         </div>
         </Waypoint>
       </section>
-      <footer><div className="logo-link">© Lila Delcourt - Tous droits réservés - Mentions légales</div></footer>
+      <footer><div className="logo-link">© Romain Delcourt - Tous droits réservés - Mentions légales</div></footer>
     </>
   );
 }
