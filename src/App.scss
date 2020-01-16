@@ -33,6 +33,22 @@ $green: #14292f;
   }
 }
 
+.overlay-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $green;
+  z-index: 4;
+  animation: 2s overlaySlide;
+  animation-fill-mode: forwards;
+}
+
 .portfolio-gallery {
   position: absolute;
   width: 100%;
@@ -51,6 +67,10 @@ $green: #14292f;
   text-transform: uppercase;
   letter-spacing: 4px;
   background-color: #000;
+  opacity: 0;
+  animation: 0.1s fadeInHome;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
 
   .close-container{
     position: absolute;
@@ -361,5 +381,20 @@ footer {
   }
   to {
     width: 50px;
+  }
+}
+
+@keyframes overlaySlide {
+  from {
+    height: 0%;
+    bottom: 0%;
+  }
+  50% {
+    height: 100%;
+    bottom: 0%;
+  }
+  to {
+    height: 0%;
+    bottom: 100%;
   }
 }

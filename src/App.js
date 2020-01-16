@@ -17,6 +17,7 @@ const PROJECTS = [
 
 const App = () => {
   const [showPortfolio, setShowPortfolio] = useState(false);
+  const [showPortfolioOverlay, setShowPortfolioOverlay] = useState(false);
   const [portfolioImage, setSPortfolioImage] = useState("jellove");
 
   const handleWaypointEnter = (div) => {
@@ -29,6 +30,27 @@ const App = () => {
     el.classList.remove("transition-on");
   }
 
+  const openMenu = () => {
+    setShowPortfolio(true)
+    setShowPortfolioOverlay(true)
+
+    setTimeout(() => {
+      setShowPortfolioOverlay(false)
+    }, 2000);
+  }
+
+  const closeMenu = () => {
+    setShowPortfolioOverlay(true)
+
+    setTimeout(() => {
+      setShowPortfolio(false)
+    }, 1000);
+
+    setTimeout(() => {
+      setShowPortfolioOverlay(false)
+    }, 2000);
+  }
+
   return (
     <>
       <div className="overlay-loading">
@@ -37,12 +59,14 @@ const App = () => {
         </div>
         <div className="underline" />
       </div>
+
+      {showPortfolioOverlay && <div className="overlay-menu" />}
       
       {showPortfolio &&
         <section 
           style={{ backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("${portfolioImage}-min.jpg")` }} 
           className="portfolio-gallery">
-          <div onClick={() => setShowPortfolio(false)} className="close-container">
+          <div onClick={() => closeMenu()} className="close-container">
             <div className="leftright"></div>
             <div className="rightleft"></div>
             <label className="close">close</label>
@@ -66,7 +90,7 @@ const App = () => {
         <div className="logo-link">
           Lila Delcourt
         </div>
-        <div onClick={() => setShowPortfolio(true)} className="menu-item galery-link">
+        <div onClick={() => openMenu()} className="menu-item galery-link">
           Menu
           <div className="underline" />
         </div>
