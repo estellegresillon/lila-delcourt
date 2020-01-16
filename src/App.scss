@@ -299,12 +299,17 @@ header {
 }
 
 .parallax {
-  /* The image used */
-  background-image: url("/golden-peaks-min.jpg");
-
-  /* Set a specific height */
-  height: 70vh;
-
+  /* Set the image used and a specific height */
+  &.first { 
+    background-image: url("/golden-peaks-min.jpg");
+    height: 70vh;
+  }
+  &.second { 
+    background-image: url("/wild-west-min.jpg");
+    height: 95vh;
+    margin-bottom: 20px;
+  }
+  
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;

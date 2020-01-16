@@ -148,7 +148,7 @@ const App = () => {
         </div>
       </section>
 
-      <div className="bg-img parallax" />
+      <div className="bg-img parallax first" />
 
       <section className="section-presentation">
         <Waypoint
@@ -164,6 +164,8 @@ const App = () => {
         </div>
         </Waypoint>
       </section>
+
+      <div className="bg-img parallax second" />
       <footer><div className="logo-link">© Romain Delcourt - Tous droits réservés - Mentions légales</div></footer>
     </>
   );
