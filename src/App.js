@@ -155,7 +155,7 @@ const App = () => {
           onEnter={() => handleWaypointEnter(".third-section")}
           onLeave={() => handleWaypointLeave(".third-section")}
         >
-          <div style={{}} className="presentation-center third-section">
+          <div className="presentation-center third-section">
             You don't make a photograph just with a camera.
             You bring to the act of photography all the pictures you have seen, the books you have read,
             the music you have heard, the people you have loved.
