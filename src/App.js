@@ -17,7 +17,7 @@ const PROJECTS = [
 
 const App = () => {
   const [showPortfolio, setShowPortfolio] = useState(false);
-  const [portfolioImage, setSPortfolioImage] = useState("about");
+  const [portfolioImage, setSPortfolioImage] = useState("jellove");
 
   const handleWaypointEnter = (div) => {
     const el = document.querySelector(div);
@@ -33,7 +33,7 @@ const App = () => {
     <>
       <div className="overlay-loading">
         <div className="logo-link">
-          Romain Delcourt
+          Lila Delcourt
         </div>
         <div className="underline" />
       </div>
@@ -42,10 +42,10 @@ const App = () => {
         <section 
           style={{ backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("${portfolioImage}-min.jpg")` }} 
           className="portfolio-gallery">
-          <div className="close-gallery">
-            <svg onClick={() => setShowPortfolio(false)} width="24" height="24" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd">
-              <path d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z"/>
-            </svg>
+          <div onClick={() => setShowPortfolio(false)} className="close-container">
+            <div className="leftright"></div>
+            <div className="rightleft"></div>
+            <label className="close">close</label>
           </div>
           {PROJECTS.map(project => {
             return (
@@ -53,9 +53,10 @@ const App = () => {
                 className={`portfolio-item ${project.className}`}
                 key={project.name}
                 onMouseEnter={() => setSPortfolioImage(project.className)}
-                onMouseLeave={() => setSPortfolioImage("about")}
+                onMouseLeave={() => setSPortfolioImage("jellove")}
               >
                 {project.name}
+                <div className="underline" />
               </div>
             )
           })}
@@ -63,10 +64,10 @@ const App = () => {
 
       <header>
         <div className="logo-link">
-          Romain Delcourt
+          Lila Delcourt
         </div>
         <div onClick={() => setShowPortfolio(true)} className="menu-item galery-link">
-          Projects
+          Menu
           <div className="underline" />
         </div>
       </header>
@@ -78,7 +79,7 @@ const App = () => {
         <video muted loop autoPlay id="myVideo">
           <source src="home4.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
           <source src="home4.webm" type='video/webm; codecs="vp8, vorbis"' />
-          <img src="/project2-min.jpg" title="Your browser does not support the <video> tag"></img>
+          <img src="/project2-min.jpg" alt="Your browser does not support the <video> tag"></img>
         </video>
       </section>
 
@@ -138,7 +139,7 @@ const App = () => {
         </div>
         </Waypoint>
       </section>
-      <footer><div className="logo-link">© Romain Delcourt - Tous droits réservés - Mentions légales</div></footer>
+      <footer><div className="logo-link">© Lila Delcourt - Tous droits réservés - Mentions légales</div></footer>
     </>
   );
 }
