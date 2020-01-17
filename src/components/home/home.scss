@@ -140,11 +140,11 @@ $light-green: #225b68;
   .parallax {
     /* Set the image used and a specific height */
     &.first { 
-      background-image: url("/golden-peaks-min.jpg");
+      background-image: url("/golden-peaks.webp");
       height: 70vh;
     }
     &.second { 
-      background-image: url("/wild-west-min.jpg");
+      background-image: url("/wild-west.webp");
       height: 95vh;
       margin-bottom: 20px;
     }

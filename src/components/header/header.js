@@ -31,7 +31,8 @@ const Header = () => {
   };
 
   const closeMenu = (pathName) => {
-    if (pathName === "/") {
+    if (pathName === "home") {
+      setShowPortfolio(false);
       return;
     };
 
@@ -52,7 +53,7 @@ const Header = () => {
         
       {showPortfolio &&
         <section 
-          style={{ backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("${portfolioImage}-min.jpg")` }} 
+          style={{ backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("${portfolioImage}.webp")` }} 
           className="portfolio-gallery">
           <div onClick={() => closeMenu()} className="close-container">
             <div className="leftright"></div>
@@ -60,24 +61,33 @@ const Header = () => {
             <label className="close">close</label>
           </div>
           {PROJECTS.map(project => {
-            return (
-              <Link 
-                key={project.name}
-                onClick={() => closeMenu()}
-                to={project.className}
-                onMouseEnter={() => setSPortfolioImage(project.className)}
-              >
-                <div className={`portfolio-item ${project.className}`}>
-                  {project.name}
-                  <div className="underline" />
-                </div>
-              </Link>
-            )
+            if (project.className !== "about") {
+              return (
+                <Link 
+                  key={project.name}
+                  onClick={() => closeMenu()}
+                  to={project.className}
+                  onMouseEnter={() => setSPortfolioImage(project.className)}
+                >
+                  <div className={`portfolio-item ${project.className}`}>
+                    {project.name}
+                  </div>
+                </Link>
+              )
+            } else {
+              return (
+                <a href="#">
+                  <div className={`portfolio-item ${project.className}`}>
+                    {project.name}
+                  </div>
+                </a>
+              )
+            }
           })}
         </section>}
 
       <header>
-        <Link to="/" onClick={() => closeMenu(window.location.pathname)}>
+        <Link to="/" onClick={() => closeMenu("home")}>
           <div className="logo-link">
             Romain Delcourt
           </div>

@@ -20,7 +20,7 @@ const Project = ({ location }) => {
 
   return (
     <div className="layout-project">
-      <div className="parallax first" style={{ backgroundImage: `url('${projectName}-min.jpg')` }} />
+      <div className="parallax first" style={{ backgroundImage: `url('${projectName}.webp')` }} />
 
       <section className="section-presentation">
         <Waypoint
@@ -39,7 +39,7 @@ const Project = ({ location }) => {
             onEnter={() => handleWaypointEnter(".img-photo-left")}
             onLeave={() => handleWaypointLeave(".img-photo-left")}
           >
-            <img rel="preload" className="img-photo-left" src={`${projectName}-1-min.jpg`} alt="project-small-left" />
+            <img rel="preload" className="img-photo-left" src={`${projectName}-1.webp`} alt="project-small-left" />
           </Waypoint>
         </div>
         <div className="photo-right">
@@ -47,12 +47,12 @@ const Project = ({ location }) => {
             onEnter={() => handleWaypointEnter(".img-photo-right")}
             onLeave={() => handleWaypointLeave(".img-photo-right")}
           >
-            <img rel="preload" className="img-photo-right" src={`${projectName}-2-min.jpg`} alt="project-small-right" />
+            <img rel="preload" className="img-photo-right" src={`${projectName}-2.webp`} alt="project-small-right" />
           </Waypoint>
         </div>
       </section>
 
-      <div className="parallax second" style={{ backgroundImage: `url('${projectName}-3-min.jpg')` }} />
+      <div className="parallax second" style={{ backgroundImage: `url('${projectName}-3.webp')` }} />
 
       <footer><div className="logo-link">© Romain Delcourt - Tous droits réservés - Mentions légales</div></footer>
     </div>
