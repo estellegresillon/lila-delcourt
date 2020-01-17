@@ -1,0 +1,55 @@
+@media screen and (max-width: 728px) {
+  .layout-home {
+    .hero-scene {
+      .title {
+        font-size: 28px;
+        width: 80%;
+      }
+    }
+
+    .section-presentation {
+      height: 70vh;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+
+      .presentation-left {
+        width: 70%;
+        margin-bottom: 50px;
+      }
+
+      .presentation-right {
+        width: 70%;
+
+        .separator {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    .section-photos, .section-photos-cta {
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      margin-left: 0;
+
+      .photo-left, .photo-right,
+      .photo-left-cta, .photo-right-cta {
+        width: 100%;
+
+        img {
+          height: auto;
+          width: 100%;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  footer {
+    text-align: center;
+    width: calc(100% - 40px);
+    margin: 0 20px 20px 20px;
+  }
+}

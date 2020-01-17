@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Waypoint } from 'react-waypoint';
 
 import './home.scss';
+import './home-mobile.scss';
 
 const Home = () => {
   const [hasLoadedWebsite, setHasLoadedWebsite] = useState(false)

@@ -3,6 +3,7 @@ import React from "react";
 import { Waypoint } from 'react-waypoint';
 
 import "./project.scss";
+import "./project-mobile.scss";
 
 const Project = ({ location }) => {
   const projectName = location.pathname.substr(1);

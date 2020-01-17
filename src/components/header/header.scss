@@ -40,7 +40,7 @@ $light-green: #225b68;
   animation-delay: 1s;
   animation-fill-mode: forwards;
 
-  .close-container{
+  .close-container {
     position: absolute;
     top: 7px;
     right: 13px;
@@ -50,7 +50,7 @@ $light-green: #225b68;
     z-index: 999;
   }
   
-  .leftright{
+  .leftright {
     height: 4px;
     width: 40px;
     position: absolute;
@@ -61,7 +61,7 @@ $light-green: #225b68;
     transition: all .3s ease-in;
   }
   
-  .rightleft{
+  .rightleft {
     height: 4px;
     width: 40px;
     position: absolute;
