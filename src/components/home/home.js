@@ -4,6 +4,8 @@ import { Waypoint } from 'react-waypoint';
 import './home.scss';
 import './home-mobile.scss';
 
+import HeroScene from "../hero-scene";
+
 const Home = () => {
   const [hasLoadedWebsite, setHasLoadedWebsite] = useState(false)
 
@@ -40,7 +42,7 @@ const Home = () => {
 
   return (
     <div className="layout-home">
-      <div style={{ 
+      <div style={{
         animation: hasLoadedWebsite ? "2s overlayFadeOut" : "5s overlayFadeOut"
       }} className="overlay-loading">
         <div className="logo-link">
@@ -49,16 +51,7 @@ const Home = () => {
         <div className="underline" />
       </div>
 
-      <section className="hero-scene">
-        <div className="title">Hello, I am a photographer based in <span className="overline">Paris</span>
-          . I am inspired by <span className="overline">nature</span> and traveling around the <span className="overline">world</span>.</div>
-        <i className="fas fa-long-arrow-alt-down" />
-        <video muted loop autoPlay id="myVideo">
-          <source src="home4.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-          <source src="home4.webm" type='video/webm; codecs="vp8, vorbis"' />
-          <img src="/project2.webp" alt="Your browser does not support the <video> tag"></img>
-        </video>
-      </section>
+      <HeroScene />
 
       <section className="section-presentation">
         <Waypoint
@@ -87,7 +80,7 @@ const Home = () => {
             onEnter={() => handleWaypointEnter(".img-photo-left")}
             onLeave={() => handleWaypointLeave(".img-photo-left")}
           >
-            <img rel="preload" className="img-photo-left" src="hero-1.webp" alt="nature-left" />
+            <img className="img-photo-left" src="hero-1.webp" alt="nature-left" />
           </Waypoint>
         </div>
         <div className="photo-right">
@@ -95,7 +88,7 @@ const Home = () => {
             onEnter={() => handleWaypointEnter(".img-photo-right")}
             onLeave={() => handleWaypointLeave(".img-photo-right")}
           >
-            <img rel="preload" className="img-photo-right" src="hero-2.webp" alt="nature-right" />
+            <img className="img-photo-right" src="hero-2.webp" alt="nature-right" />
           </Waypoint>
         </div>
       </section>
@@ -125,7 +118,7 @@ const Home = () => {
             onEnter={() => handleWaypointEnter(".img-photo-left-cta")}
             onLeave={() => handleWaypointLeave(".img-photo-left-cta")}
           >
-            <img rel="preload" className="img-photo-left-cta" src="volcano-1.webp" alt="nature-left" />
+            <img className="img-photo-left-cta" src="volcano-1.webp" alt="nature-left" />
           </Waypoint>
         </div>
         <div className="photo-right-cta">
@@ -133,7 +126,7 @@ const Home = () => {
             onEnter={() => handleWaypointEnter(".img-photo-right-cta")}
             onLeave={() => handleWaypointLeave(".img-photo-right-cta")}
           >
-            <img rel="preload" className="img-photo-right-cta" src="volcano-2.webp" alt="nature-right" />
+            <img className="img-photo-right-cta" src="volcano-2.webp" alt="nature-right" />
           </Waypoint>
         </div>
       </section>

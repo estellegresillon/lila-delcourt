@@ -35,46 +35,6 @@ $light-green: #225b68;
     }
   }
 
-  .hero-scene {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
-    object-fit: cover;
-    overflow: hidden;
-    color: #fff;
-
-    .overline {
-      background: rgba(0,0,0,0.2);
-      padding: 0 10px;
-      font-weight: 900;
-    }
-
-    .title {
-      position: absolute;
-      z-index: 1;
-      font-size: 42px;
-      opacity: 0;
-      animation: 2s fadeInHome;
-      animation-fill-mode: forwards;
-      animation-delay: 0.5s;
-      width: 60%;
-      text-align: center;
-    }
-
-    i {
-      position: absolute;
-      z-index: 1;
-      font-size: 24px;
-      animation: 2s cursorTap infinite;
-      border-radius: 50%;
-      background: rgba(0,0,0,0.2);
-      padding: 18px 25px;
-    }
-  }
-
   .section-presentation {
     height: 50vh;
     width: 100%;
