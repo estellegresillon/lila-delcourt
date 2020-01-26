@@ -11,9 +11,17 @@
 
   video { z-index: -2; }
 
-  span {
+  .overline {
     background: rgba(0,0,0,0.2);
-    padding: 0 10px;
+    padding: 0 15px;
+    z-index: -1;
+    position: relative;
+  }
+
+  .title-big {
+    font-size: 90px;
+    line-height: 70px;
+    font-style: italic;
   }
 
   .hero-scene-img {
@@ -21,24 +29,28 @@
     right: 0;
     bottom: 30vh;
     width: 20vw;
-    height: 40vh;
+    height: 0vh;
     opacity: 0.8;
     background-image: url("/hero-2.webp");
     background-attachment: fixed;
     background-position: center;
     background-size: contain;
+    animation: 1s expandUp;
+    animation-fill-mode: forwards;
+    animation-delay: 3.5s;
   }
 
   .title {
     position: absolute;
     z-index: 1;
-    font-size: 62px;
+    font-size: 48px;
+    line-height: 48px;
     margin-left: 20vw;
     opacity: 0;
     animation: 2s fadeInHome;
     animation-fill-mode: forwards;
-    animation-delay: 0.5s;
-    width: 60%;
+    animation-delay: 3s;
+    width: 50vw;
     text-align: left;
     text-transform: uppercase;
   }
@@ -93,5 +105,14 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes expandUp {
+  from {
+    height: 0;
+  }
+  to {
+    height: 40vh;
   }
 }

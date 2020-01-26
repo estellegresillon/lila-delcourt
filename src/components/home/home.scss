@@ -41,8 +41,56 @@ $light: #4f4d5d;
     }
 
     &.second { 
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background-image: url("/wild-west.webp");
       height: 95vh;
+
+      .btn-contact {
+        position: relative;
+        height: 55px;
+        width: 240px;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        font-size: 13px;
+        white-space: nowrap;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-left: 2vw;
+        cursor: pointer;
+        background-color: transparent;
+        color: #fff;
+        font-weight: 900;
+        margin: 25px 0 30px 0;
+        font-family: "Playfair Display", sans-serif;
+        transition: 1s color ease;
+
+        span { z-index: 1; }
+    
+        &:hover {
+          color: $dark;
+    
+          .btn-background {
+            display: block;
+            animation: 0.5s backgroundCover;
+            animation-fill-mode: forwards;
+          }
+        }
+    
+        .btn-background {
+          position: absolute;
+          display: none;
+          height: 100%;
+          width: 100%;
+          z-index: 0;
+          left: 0;
+          background-color: #fff;
+        }
+      }
     }
     
     background-attachment: fixed;
@@ -83,4 +131,13 @@ $light: #4f4d5d;
 @keyframes overlayUnderline {
   from { width: 0%; }
   to { width: 100%; }
+}
+
+@keyframes backgroundCover {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }

@@ -38,12 +38,17 @@ const Home = () => {
         handleWaypointEnter={handleWaypointEnter}
         handleWaypointLeave={handleWaypointLeave}
       />
-      <div className="parallax second" />
+      <div className="parallax second">
+        <button className="btn-contact">
+          <span>- Discover my work -</span>
+          <div className="btn-background" />
+        </button>
+      </div>
       <Contact
         handleWaypointEnter={handleWaypointEnter}
         handleWaypointLeave={handleWaypointLeave}
       />
-      <footer><div className="logo-link">© Romain Dumas - All rights reserved</div></footer>
+      <footer><div className="logo-link">© Romain Delcourt - All rights reserved</div></footer>
     </div>
   );
 }

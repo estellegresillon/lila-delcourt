@@ -1,3 +1,5 @@
+$dark: #1b1b23;
+
 .section-contact {
   height: 50vh;
   width: 100%;
@@ -17,17 +19,63 @@
   }
 
   .btn-contact {
+    height: 45px;
+    position: relative;
+    width: 150px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid rgba(255, 255, 255, 0.5);
-    padding: 8px 10px;
     font-size: 13px;
+    white-space: nowrap;
     letter-spacing: 2px;
-    opacity: 1;
     text-transform: uppercase;
     margin-left: 2vw;
     cursor: pointer;
     background-color: transparent;
-    color: white;
-    margin: 15px 0 30px 0;
+    color: #fff;
+    font-weight: 900;
+    margin: 25px 0 30px 0;
     font-family: "Playfair Display", sans-serif;
+    transition: 1s color ease;
+
+    &:hover {
+      color: $dark;
+
+      .btn-background {
+        display: block;
+        animation: 0.5s backgroundCover;
+        animation-fill-mode: forwards;
+      }
+    }
+
+    .btn-background {
+      position: absolute;
+      display: none;
+      height: 100%;
+      width: 100%;
+      z-index: -2;
+      left: 0;
+      background-color: #fff;
+    }
+  }
+}
+
+@keyframes backgroundCover {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes backgroundUncover {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
   }
 }

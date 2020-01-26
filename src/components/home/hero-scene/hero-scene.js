@@ -4,13 +4,20 @@ import "./hero-scene.scss";
 import "./hero-scene-mobile.scss";
 
 const HeroScene = () => {
+  const scrollToSection = () => {
+    const sectionOne = document.querySelector(".section-presentation");
+    sectionOne.scrollIntoView();
+  }
+
   return (
     <section className="hero-scene">
       <div className="title">
-        I AM ROMAIN DUMAS, A <span>PHOTOGRAPHER</span> BASED IN <span>PARIS</span> AND INSPIRED BY NATURE AND MY TRAVELS AROUND THE WORLD.
+        <span className="title-big">I am Romain Delcourt,</span>
+        <br />
+        A <span className="overline">photographer</span> based in <span className="overline">Paris</span> and inspired by nature and wildlife.
       </div>
       <div className="hero-scene-img" />
-      <i className="fas fa-long-arrow-alt-down" />
+      <i className="fas fa-long-arrow-alt-down" onClick={() => scrollToSection()} />
       <i className="fab fa-instagram" />
       <video muted loop autoPlay id="myVideo">
         <source src="home4.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />

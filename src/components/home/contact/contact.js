@@ -17,7 +17,10 @@ const Contact = ({ handleWaypointEnter, handleWaypointLeave }) => {
           <div className="contact-center fourth-section" ref={contact}>
             <h2>Let's get in touch</h2>
             <p>For business inquiries, a special project or any questions, feel free to contact me :</p>
-            <button className="btn-contact">CONTACT ME</button>
+            <button className="btn-contact">
+              CONTACT ME
+              <div className="btn-background" />
+            </button>
           </div>
         </Waypoint>
       </section>
