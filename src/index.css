@@ -3,6 +3,8 @@ body {
   font-family: "Playfair Display", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1b1b23;
+  color: #fff;
 }
 
 code {
@@ -11,6 +13,6 @@ code {
 }
 
 ::selection {
-  background: #225b68;
+  background: #1b1b23;
   color: #fff;
 }

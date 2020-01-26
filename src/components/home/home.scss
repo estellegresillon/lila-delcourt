@@ -1,5 +1,5 @@
-$dark-green: #14292f;
-$light-green: #225b68;
+$dark: #1b1b23;
+$light: #444349;
 
 .layout-home {
   .overlay-loading {
@@ -13,9 +13,9 @@ $light-green: #225b68;
     width: 100vw;
     height: 100vh;
     opacity: 0;
-    background-color: $dark-green;
+    background-color: $dark;
     z-index: 3;
-    color: $light-green;
+    color: $light;
     animation: 5s overlayFadeOut;
     animation-fill-mode: forwards;
 
@@ -29,7 +29,7 @@ $light-green: #225b68;
     .underline {
       margin-top: 5px;
       width: 0px;
-      border-top: 1px solid $light-green;
+      border-top: 1px solid $light;
       animation: 3.5s overlayUnderline;
       animation-fill-mode: forwards;
     }
@@ -56,6 +56,7 @@ $light-green: #225b68;
       border-left: 1px solid gray;
       padding-left: 40px;
       opacity: 0;
+      line-height: 32px;
     }
 
     .presentation-right {
@@ -98,18 +99,16 @@ $light-green: #225b68;
   }
 
   .parallax {
-    /* Set the image used and a specific height */
     &.first { 
       background-image: url("/golden-peaks.webp");
       height: 70vh;
     }
+
     &.second { 
       background-image: url("/wild-west.webp");
       height: 95vh;
-      margin-bottom: 20px;
     }
     
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -124,6 +123,8 @@ $light-green: #225b68;
     height: 10vh;
     font-size: 12px;
     height: 40px;
+    margin-top: 30px;
+    color: #b5b5d8;
   }
 
   .section-photos-cta {
@@ -153,6 +154,18 @@ $light-green: #225b68;
   }
 }
 
+.section-contact {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .fourth-section {
+    opacity: 0;
+  }
+}
+
 @keyframes overlayFadeOut {
   from {
     opacity: 1;
@@ -161,7 +174,7 @@ $light-green: #225b68;
     opacity: 1;
   }
   to {
-    opacity: 0;
+    opacity: 1;
   }
 }
 

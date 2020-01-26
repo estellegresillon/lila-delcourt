@@ -5,6 +5,7 @@ import './home.scss';
 import './home-mobile.scss';
 
 import HeroScene from "../hero-scene";
+import Map from "./map";
 
 const Home = () => {
   const [hasLoadedWebsite, setHasLoadedWebsite] = useState(false)
@@ -112,25 +113,20 @@ const Home = () => {
 
       <div className="parallax second" />
 
-      <section className="section-photos-cta">
-        <div className="photo-left-cta">
-          <Waypoint
-            onEnter={() => handleWaypointEnter(".img-photo-left-cta")}
-            onLeave={() => handleWaypointLeave(".img-photo-left-cta")}
-          >
-            <img className="img-photo-left-cta" src="volcano-1.webp" alt="nature-left" />
-          </Waypoint>
+      <section className="section-contact">
+        <Waypoint
+          onEnter={() => handleWaypointEnter(".fourth-section")}
+          onLeave={() => handleWaypointLeave(".fourth-section")}
+        >
+          <div className="contact-center fourth-section">
+            CONTACT ME
         </div>
-        <div className="photo-right-cta">
-          <Waypoint
-            onEnter={() => handleWaypointEnter(".img-photo-right-cta")}
-            onLeave={() => handleWaypointLeave(".img-photo-right-cta")}
-          >
-            <img className="img-photo-right-cta" src="volcano-2.webp" alt="nature-right" />
-          </Waypoint>
-        </div>
+        </Waypoint>
       </section>
-      <footer><div className="logo-link">© Romain Delcourt - Tous droits réservés - Mentions légales</div></footer>
+
+      <Map />
+
+      <footer><div className="logo-link">© Romain Dumas - All rights reserved</div></footer>
     </div>
   );
 }

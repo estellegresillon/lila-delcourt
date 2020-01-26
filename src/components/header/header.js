@@ -9,7 +9,7 @@ const Header = () => {
     <header>
       <Link to="/">
         <div className="logo-link">
-          Romain Delcourt
+          RD
         </div>
       </Link>
 
