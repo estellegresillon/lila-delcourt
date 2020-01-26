@@ -7,6 +7,7 @@ import HeroScene from "./hero-scene";
 import Presentation from "./presentation";
 import ScrollParallax from "./scroll-parallax";
 import Paragraph from "./paragraph";
+import ContactButton from "./contact-button";
 import Contact from "./contact";
 
 const Home = () => {
@@ -38,12 +39,7 @@ const Home = () => {
         handleWaypointEnter={handleWaypointEnter}
         handleWaypointLeave={handleWaypointLeave}
       />
-      <div className="parallax second">
-        <button className="btn-contact">
-          <span>- Discover my work -</span>
-          <div className="btn-background" />
-        </button>
-      </div>
+      <ContactButton />
       <Contact
         handleWaypointEnter={handleWaypointEnter}
         handleWaypointLeave={handleWaypointLeave}

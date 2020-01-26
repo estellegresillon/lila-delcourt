@@ -1,0 +1,103 @@
+$dark: #1b1b23;
+$light: #f5f0dc;
+
+nav {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50vw;
+  height: 100vh;
+  background-color: $dark;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: $light;
+  z-index: 3;
+  box-shadow: -5px 5px 70px rgba(0,0,0,0.7);
+
+  .close-menu {
+    position: absolute;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    transition: 0.5s color ease;
+
+    &:hover {
+      color: #b9b9aa;
+    }
+  }
+
+  .list-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-left: 15%;
+    height: 100%;
+    width: 85%;
+    
+    .menu-item {
+      font-size: 63px;
+      font-style: italic;
+      transition: 0.5s color ease;
+      color: black;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &:hover {
+        color: $light;
+      }
+    }
+  }
+}
+
+.menu-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.7);
+}
+
+@keyframes slideFromRight {
+  from { 
+    width: 0%;
+  }
+  to { 
+    width: 50vw;
+  }
+}
+
+@keyframes slideBack {
+  from { 
+    width: 50vw;
+  }
+  50% { width: 50vw; }
+  to { 
+    width: 0%;
+  }
+}
+
+@keyframes fadeInText {
+  from { 
+    opacity: 0;
+  }
+  50% { opacity: 0; }
+  to { 
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutText {
+  from { 
+    opacity: 1;
+  }
+  to { 
+    opacity: 0;
+  }
+}

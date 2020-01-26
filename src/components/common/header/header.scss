@@ -1,5 +1,5 @@
-$dark-green: #14292f;
-$light-green: #225b68;
+$dark: #1b1b23;
+$light: #f5f0dc;
 
 header {
   display: flex;
@@ -18,6 +18,24 @@ header {
   a {
     color: #fff;
     text-decoration: none;
+  }
+
+  .center-menu {
+    display: flex;
+    align-items: center;
+
+    .center-menu-item {
+      cursor: pointer;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .center-menu-item:first-child {
+      padding-right: 20px;
+      border-right: 1px solid #fff;
+      margin-right: 20px;
+    }
   }
 
   .logo-link {
