@@ -1,0 +1,15 @@
+.section-paragraph {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .paragraph-center {
+    width: 50%;
+    border-left: 1px solid gray;
+    padding-left: 40px;
+    opacity: 0;
+    line-height: 32px;
+  }
+}

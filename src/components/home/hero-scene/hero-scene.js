@@ -7,7 +7,7 @@ const HeroScene = () => {
   return (
     <section className="hero-scene">
       <div className="title">
-        I AM ROMAIN DUMAS, A PHOTOGRAPHER BASED IN PARIS AND INSPIRED BY NATURE AND MY TRAVELS AROUND THE WORLD.
+        I AM ROMAIN DUMAS, A <span>PHOTOGRAPHER</span> BASED IN <span>PARIS</span> AND INSPIRED BY NATURE AND MY TRAVELS AROUND THE WORLD.
       </div>
       <div className="hero-scene-img" />
       <i className="fas fa-long-arrow-alt-down" />

@@ -1,0 +1,27 @@
+.section-presentation {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .presentation-left {
+    width: 25%;
+    font-size: 42px;
+    text-align: right;
+    opacity: 0;
+    line-height: 42px;
+  }
+
+  .presentation-right {
+    width: 50%;
+    opacity: 0;
+    line-height: 32px;
+
+    .separator {
+      width: 50px;
+      border-top: 1px solid gray;
+      margin-bottom: 10px;
+    }
+  }
+}

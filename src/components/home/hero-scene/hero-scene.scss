@@ -11,10 +11,9 @@
 
   video { z-index: -2; }
 
-  .overline {
+  span {
     background: rgba(0,0,0,0.2);
     padding: 0 10px;
-    font-weight: 900;
   }
 
   .hero-scene-img {
@@ -64,5 +63,35 @@
 
       &:hover { bottom: 7vh; }
     }
+  }
+}
+
+@keyframes cursorTap {
+  from {
+    bottom: 6.5vh;
+  }
+  20% {
+    bottom: 5vh;
+  }
+  40% {
+    bottom: 6.5vh;
+  }
+  60% {
+    bottom: 5vh;
+  }
+  80% {
+    bottom: 6.5vh;
+  }
+  to {
+    bottom: 6.5vh;
+  }
+}
+
+@keyframes fadeInHome {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

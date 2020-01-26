@@ -1,5 +1,5 @@
 $dark: #1b1b23;
-$light: #444349;
+$light: #4f4d5d;
 
 .layout-home {
   .overlay-loading {
@@ -16,13 +16,12 @@ $light: #444349;
     background-color: $dark;
     z-index: 3;
     color: $light;
-    animation: 5s overlayFadeOut;
+    animation: 3s overlayFadeOut;
     animation-fill-mode: forwards;
 
     .logo-link {
-      font-size: 72px;
+      font-size: 36px;
       letter-spacing: 2px;
-      font-weight: 900;
       text-transform: uppercase;
     }
 
@@ -30,71 +29,8 @@ $light: #444349;
       margin-top: 5px;
       width: 0px;
       border-top: 1px solid $light;
-      animation: 3.5s overlayUnderline;
+      animation: 1.5s overlayUnderline;
       animation-fill-mode: forwards;
-    }
-  }
-
-  .section-presentation {
-    height: 50vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    .presentation-left {
-      width: 25%;
-      font-size: 42px;
-      text-align: right;
-      opacity: 0;
-      font-weight: 900;
-      line-height: 42px;
-    }
-
-    .presentation-center {
-      width: 50%;
-      border-left: 1px solid gray;
-      padding-left: 40px;
-      opacity: 0;
-      line-height: 32px;
-    }
-
-    .presentation-right {
-      width: 50%;
-      opacity: 0;
-
-      .separator {
-        width: 50px;
-        border-top: 1px solid gray;
-        margin-bottom: 10px;
-      }
-    }
-  }
-
-  .section-photos {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 60vh;
-    width: 60%;
-    margin-left: 35%;
-    margin-bottom: 25vh;
-
-    .photo-left, .photo-right {
-      width: 50%;
-      height: 100%;
-      object-fit: cover;
-      overflow: hidden;
-
-      img { 
-        height: 100%;
-        width: auto;
-        opacity: 0;
-      }
-    }
-
-    .photo-right {
-      img { margin-left: 5%; }
     }
   }
 
@@ -117,101 +53,34 @@ $light: #444349;
 
   footer {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     width: 100%;
-    height: 10vh;
-    font-size: 12px;
-    height: 40px;
-    margin-top: 30px;
+    height: 15vh;
+    font-size: 14px;
     color: #b5b5d8;
-  }
-
-  .section-photos-cta {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 60vh;
-    width: 60%;
-    margin: 20vh 5%;
-
-    .photo-left-cta, .photo-right-cta {
-      width: 50%;
-      height: 100%;
-      object-fit: cover;
-      overflow: hidden;
-
-      img { 
-        height: 100%;
-        width: auto;
-        opacity: 0;
-      }
-    }
-
-    .photo-right-cta {
-      img { margin-left: 5%; }
-    }
-  }
-}
-
-.section-contact {
-  height: 50vh;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
-  .fourth-section {
-    opacity: 0;
   }
 }
 
 @keyframes overlayFadeOut {
   from {
     opacity: 1;
+    z-index: 999;
   }
   80% {
     opacity: 1;
   }
+  99% {
+    opacity: 0;
+    z-index: 999;
+  }
   to {
-    opacity: 1;
+    opacity: 0;
+    z-index: -999;
   }
 }
 
 @keyframes overlayUnderline {
   from { width: 0%; }
-  10% { width: 5% }
-  30% { width: 50% }
-  90% { width: 70% }
   to { width: 100%; }
-}
-
-@keyframes cursorTap {
-  from {
-    bottom: 6.5vh;
-  }
-  20% {
-    bottom: 5vh;
-  }
-  40% {
-    bottom: 6.5vh;
-  }
-  60% {
-    bottom: 5vh;
-  }
-  80% {
-    bottom: 6.5vh;
-  }
-  to {
-    bottom: 6.5vh;
-  }
-}
-
-@keyframes fadeInHome {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
