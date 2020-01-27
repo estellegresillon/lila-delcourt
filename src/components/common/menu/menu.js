@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import "./menu.scss";
 
-const Menu = ({ visibleRef, willDisappear, setIsComponentVisible }) => {
+const Menu = ({ visibleRef, willDisappear, setIsComponentVisible, offsetTop }) => {
   const [willClose, setWillClose] = useState(false);
 
   const handleClose = () => {
@@ -11,10 +11,6 @@ const Menu = ({ visibleRef, willDisappear, setIsComponentVisible }) => {
       setIsComponentVisible(false);
     }, 1000);
   };
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <nav 

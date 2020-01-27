@@ -27,13 +27,13 @@ const Header = () => {
         <div className="underline" />
       </div>
       {isComponentVisible &&
-        <>
+        <div className="menu-wrapper">
           <Menu 
             setIsComponentVisible={setIsComponentVisible}
             willDisappear={willDisappear}
             visibleRef={ref} />
           <div className="menu-overlay" />
-        </>}
+        </div>}
     </header>
   );
 };

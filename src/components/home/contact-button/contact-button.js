@@ -13,13 +13,13 @@ const ContactButton = () => {
         <div className="btn-background" />
       </button>
       {isComponentVisible &&
-        <>
+        <div className="menu-wrapper">
           <Menu 
             setIsComponentVisible={setIsComponentVisible}
             willDisappear={willDisappear}
             visibleRef={ref} />
           <div className="menu-overlay" />
-        </>}
+        </div>}
     </div>
   );
 };
