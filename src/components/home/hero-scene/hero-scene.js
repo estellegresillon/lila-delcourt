@@ -19,10 +19,9 @@ const HeroScene = () => {
       <div className="hero-scene-img" />
       <i className="fas fa-long-arrow-alt-down" onClick={() => scrollToSection()} />
       <i className="fab fa-instagram" />
+      <div className="video-overlay" />
       <video muted loop autoPlay id="myVideo">
-        <source src="home4.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-        <source src="home4.webm" type='video/webm; codecs="vp8, vorbis"' />
-        <img src="/hero-2.webp" alt="Your browser does not support the <video> tag"></img>
+        <source src="home.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
       </video>
     </section>
   );

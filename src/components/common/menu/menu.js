@@ -27,10 +27,10 @@ const Menu = ({ visibleRef, willDisappear, setIsComponentVisible, offsetTop }) =
           animationFillMode: willDisappear || willClose ? "forwards" : ""
         }}
       >
-        <div className="menu-item">Nature</div>
-        <div className="menu-item">Wildlife</div>
-        <div className="menu-item">Peaks</div>
-        <div className="menu-item">Volcano</div>
+        <div className="list-menu-item">Nature</div>
+        <div className="list-menu-item">Wildlife</div>
+        <div className="list-menu-item">Peaks</div>
+        <div className="list-menu-item">Volcano</div>
       </div>
     </nav>
   );

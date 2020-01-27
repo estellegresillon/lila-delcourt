@@ -11,6 +11,15 @@
 
   video { z-index: -2; }
 
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    background-color: rgba(0,0,0,0.5);
+  }
+
   .overline {
     text-decoration: underline;
   }
@@ -27,10 +36,10 @@
     bottom: 30vh;
     width: 20vw;
     height: 0vh;
-    opacity: 0.8;
-    background-image: url("/hero-2.webp");
+    z-index: 1;
+    background-image: url("/wild-west-1.webp");
     background-attachment: fixed;
-    background-position: center;
+    background-position: right;
     background-size: contain;
     animation: 1s expandUp;
     animation-fill-mode: forwards;
