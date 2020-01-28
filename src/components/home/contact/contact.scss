@@ -1,6 +1,8 @@
 $dark: #1b1b23;
 
 .section-contact {
+  position: relative;
+  z-index: 3;
   height: 50vh;
   width: 100%;
   display: flex;
@@ -21,6 +23,7 @@ $dark: #1b1b23;
   .btn-contact {
     height: 45px;
     position: relative;
+    z-index: 3;
     width: 150px;
     padding: 0 20px;
     display: flex;

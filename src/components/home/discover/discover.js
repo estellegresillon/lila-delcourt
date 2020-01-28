@@ -3,7 +3,7 @@ import { useComponentVisible } from "../../../hooks/useComponentVisible";
 
 import Menu from "../../common/menu";
 
-const ContactButton = () => {
+const Discover = () => {
   const { ref, isComponentVisible, setIsComponentVisible, willDisappear } = useComponentVisible(false, 1000);
 
   return (
@@ -24,4 +24,4 @@ const ContactButton = () => {
   );
 };
 
-export default ContactButton;
+export default Discover;

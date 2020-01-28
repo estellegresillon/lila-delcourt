@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./menu.scss";
 
-const Menu = ({ visibleRef, willDisappear, setIsComponentVisible, offsetTop }) => {
+const Menu = ({ visibleRef, willDisappear, setIsComponentVisible }) => {
   const [willClose, setWillClose] = useState(false);
 
   const handleClose = () => {
@@ -11,6 +11,13 @@ const Menu = ({ visibleRef, willDisappear, setIsComponentVisible, offsetTop }) =
       setIsComponentVisible(false);
     }, 1000);
   };
+
+  const navigateToProject = project => {
+    handleClose();
+    setTimeout(() => {
+      window.location.assign(project);
+    }, 1000);
+  }
 
   return (
     <nav 
@@ -28,7 +35,7 @@ const Menu = ({ visibleRef, willDisappear, setIsComponentVisible, offsetTop }) =
         }}
       >
         <div className="list-menu-item">Nature</div>
-        <div className="list-menu-item">Wildlife</div>
+        <div className="list-menu-item" onClick={() => navigateToProject("/wild-west")}>Wildlife</div>
         <div className="list-menu-item">Peaks</div>
         <div className="list-menu-item">Volcano</div>
       </div>

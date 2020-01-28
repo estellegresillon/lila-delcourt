@@ -18,8 +18,10 @@ const Header = () => {
       </Link>
 
       <div className="center-menu">
-        <div className="center-menu-item">About</div>
-        <div className="center-menu-item">Contact</div>
+        <div className="menu-item center-menu-item">
+          Contact
+          <div className="underline" />
+        </div>
       </div>
 
       <div className="menu-item galery-link" onClick={() => setIsComponentVisible(true)}>

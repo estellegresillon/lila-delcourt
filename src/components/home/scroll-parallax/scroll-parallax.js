@@ -11,7 +11,7 @@ const ScrollParallax = () => {
     const containerTop = parallax.current.offsetTop
     const distanceFromTop = window.pageYOffset;
 
-    photoLeft.current.style.marginTop = `${(distanceFromTop - containerTop) * 0.5}px`;
+    photoLeft.current.style.marginTop = `${(distanceFromTop - containerTop) * 0.2}px`;
     photoRight.current.style.marginTop = `${(distanceFromTop - containerTop) * 0.8}px`;
   }
 

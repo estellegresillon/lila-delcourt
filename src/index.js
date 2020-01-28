@@ -6,7 +6,7 @@ import './index.css';
 import Header from "./components/common/header";
 import Home from './components/home';
 import Grid from './components/common/grid';
-// import Project from "./components/project";
+import Project from "./components/project";
 
 const App = () => (
   <Router>
@@ -14,6 +14,7 @@ const App = () => (
       <Grid />
       <Header />
       <Route exact path="/" component={Home} />
+      <Route exact path="/wild-west" component={Project} />
     </React.Fragment>
   </Router>
 );

@@ -4,7 +4,7 @@ $light: #f5f0dc;
 nav {
   position: absolute;
   right: 0;
-  width: 50vw;
+  width: 40vw;
   height: 100vh;
   background-color: $dark;
   display: flex;
@@ -16,10 +16,10 @@ nav {
 
   .close-menu {
     position: absolute;
-    font-size: 11px;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 3px;
-    top: 20px;
+    top: 35px;
     right: 20px;
     cursor: pointer;
     transition: 0.5s color ease;
@@ -46,6 +46,10 @@ nav {
       cursor: pointer;
       letter-spacing: 3px;
 
+      &:last-child {
+        margin-bottom: 0;
+      }
+
       &:hover {
         color: #fff;
       }
@@ -67,15 +71,15 @@ nav {
     width: 0%;
   }
   to { 
-    width: 50vw;
+    width: 40vw;
   }
 }
 
 @keyframes slideBack {
   from { 
-    width: 50vw;
+    width: 40vw;
   }
-  50% { width: 50vw; }
+  50% { width: 40vw; }
   to { 
     width: 0%;
   }
