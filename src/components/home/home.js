@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import './home.scss';
 import './home-mobile.scss';
@@ -18,6 +18,10 @@ const Home = () => {
   const handleWaypointLeave = ref => {
     ref.classList.remove("transition-on");
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
 
   return (
     <div className="layout-home">
