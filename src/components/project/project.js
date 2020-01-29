@@ -62,7 +62,7 @@ const Project = ({ location }) => {
 
       <div className="parallax second" style={{ backgroundImage: `url('${projectName}-3.webp')` }} />
 
-      <footer><div className="logo-link">© Romain Delcourt - Tous droits réservés - Mentions légales</div></footer>
+      <footer><div className="logo-link">© Rafael Bolano - All rights reserved</div></footer>
     </div>
   );
 };

@@ -23,7 +23,7 @@ const Home = () => {
     <div className="layout-home">
       <div className="overlay-loading">
         <div className="logo-link">
-          Romain Delcourt
+          Rafael Bolano
         </div>
         <div className="underline" />
       </div>
@@ -44,7 +44,7 @@ const Home = () => {
         handleWaypointEnter={handleWaypointEnter}
         handleWaypointLeave={handleWaypointLeave}
       />
-      <footer><div className="logo-link">© Romain Delcourt - All rights reserved</div></footer>
+      <footer><div className="logo-link">© Rafael Bolano - All rights reserved</div></footer>
     </div>
   );
 }

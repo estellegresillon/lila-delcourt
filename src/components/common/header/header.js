@@ -13,7 +13,7 @@ const Header = () => {
     <header>
       <Link to="/">
         <div className="logo-link">
-          RD
+          RB
         </div>
       </Link>
 
