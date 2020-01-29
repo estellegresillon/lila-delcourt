@@ -24,10 +24,10 @@ const MapContainer = () => (
 const MapView = compose(withScriptjs, withGoogleMap)(() => {
   return (
     <GoogleMap 
-      defaultZoom={11}
+      defaultZoom={9}
       defaultOptions={{ styles: SKIN }}
-      center={{ lat: 48.863, lng: 2.34 }}>
-        <Marker position={{ lat: 48.863, lng: 2.34 }} />
+      center={{ lat: 51.52, lng: -0.128 }}>
+        <Marker position={{ lat: 51.52, lng: -0.128 }} />
     </GoogleMap>
   );
 });

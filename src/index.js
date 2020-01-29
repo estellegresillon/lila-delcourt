@@ -6,6 +6,7 @@ import './index.css';
 import Header from "./components/common/header";
 import Home from './components/home';
 import Grid from './components/common/grid';
+import Contact from "./components/contact";
 import Project from "./components/project";
 
 const App = () => (
@@ -14,6 +15,7 @@ const App = () => (
       <Grid />
       <Header />
       <Route exact path="/" component={Home} />
+      <Route exact path="/contact" component={Contact} />
       <Route exact path="/wild-west" component={Project} />
       <Route exact path="/aerials" component={Project} />
       <Route exact path="/portraits" component={Project} />

@@ -20,6 +20,11 @@ $dark: #1b1b23;
     }
   }
 
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
   .btn-contact {
     height: 45px;
     position: relative;
@@ -37,15 +42,15 @@ $dark: #1b1b23;
     margin-left: 2vw;
     cursor: pointer;
     background-color: transparent;
-    color: #fff;
     font-weight: 900;
     margin: 25px 0 30px 0;
     font-family: "Playfair Display", sans-serif;
     transition: 1s color ease;
 
     &:hover {
-      color: $dark;
-
+      a {
+        color: $dark;
+      }
       .btn-background {
         display: block;
         animation: 0.5s backgroundCover;

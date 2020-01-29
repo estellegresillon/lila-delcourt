@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { Waypoint } from 'react-waypoint';
+import { Link } from "react-router-dom";
 
 import "./contact.scss";
 import Map from "./map";
@@ -18,7 +19,9 @@ const Contact = ({ handleWaypointEnter, handleWaypointLeave }) => {
             <h2>Let's get in touch</h2>
             <p>For business inquiries, a special project or any questions, feel free to contact me :</p>
             <button className="btn-contact">
-              CONTACT ME
+              <Link to="/contact">
+                CONTACT ME
+              </Link>
               <div className="btn-background" />
             </button>
           </div>

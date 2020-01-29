@@ -19,7 +19,9 @@ const Header = () => {
 
       <div className="center-menu">
         <div className="menu-item center-menu-item">
-          Contact
+          <Link to="/contact">
+            Contact
+          </Link>
           <div className="underline" />
         </div>
       </div>
