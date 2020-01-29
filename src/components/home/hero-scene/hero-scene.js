@@ -14,7 +14,7 @@ const HeroScene = () => {
       <div className="title">
         <span className="title-big">I am Rafael Bolano,</span>
         <br />
-        A <span className="overline">photographer</span> based in <span className="overline">London</span> and inspired by nature and wildlife.
+        A <span className="overline">photographer</span> based in <span className="overline">London</span> and inspired by people and wildlife.
       </div>
       <div className="hero-scene-img" />
       <i className="fas fa-long-arrow-alt-down" onClick={() => scrollToSection()} />

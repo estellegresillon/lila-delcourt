@@ -15,6 +15,9 @@ const App = () => (
       <Header />
       <Route exact path="/" component={Home} />
       <Route exact path="/wild-west" component={Project} />
+      <Route exact path="/aerials" component={Project} />
+      <Route exact path="/portraits" component={Project} />
+      <Route exact path="/homeland" component={Project} />
     </React.Fragment>
   </Router>
 );

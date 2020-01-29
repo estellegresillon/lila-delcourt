@@ -14,7 +14,7 @@ const Presentation = ({ handleWaypointEnter, handleWaypointLeave }) => {
         onLeave={() => handleWaypointLeave(presentationLeft.current)}
       >
         <div className="presentation-left" ref={presentationLeft}>
-          I don't trust words, I trust pictures.
+          The camera is a sketch book, an instrument of intuition and spontaneity.
         </div>
       </Waypoint>
       <Waypoint
@@ -23,8 +23,8 @@ const Presentation = ({ handleWaypointEnter, handleWaypointLeave }) => {
       >
         <div className="presentation-right" ref={presentationRight}>
           <div className="separator" />
-          The camera is a sketch book, an instrument of intuition and spontaneity.
-          When words become unclear, I shall focus with photographs. When images become inadequate, I shall be content with silence.
+          I am an advocate of film for the timeless and elegant images it creates. 
+          With my background in journalism, storytelling is important to me, which means I value real moments, details and photos that encapsulate a sense of place.
         </div>
       </Waypoint>
     </section>

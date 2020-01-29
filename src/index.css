@@ -3,7 +3,7 @@ body {
   font-family: "Playfair Display", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #1b1b23;
+  background-color: #0d1319;
   color: #fff;
 }
 
@@ -12,7 +12,11 @@ code {
     monospace;
 }
 
+*, *::after, *::before {
+  outline: none;
+}
+
 ::selection {
-  background: #1b1b23;
+  background: #0d1319;
   color: #fff;
 }

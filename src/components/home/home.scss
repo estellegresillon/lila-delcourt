@@ -1,5 +1,4 @@
 $dark: #0d1319;
-$light: #f5f0dc;
 
 .menu-wrapper {
   position: fixed; 
@@ -22,7 +21,7 @@ $light: #f5f0dc;
     opacity: 0;
     background-color: $dark;
     z-index: 999;
-    color: $light;
+    color: #fff;
     animation: 3s overlayFadeOut;
     animation-fill-mode: forwards;
 
@@ -35,7 +34,7 @@ $light: #f5f0dc;
     .underline {
       margin-top: 5px;
       width: 0px;
-      border-top: 1px solid $light;
+      border-top: 1px solid #fff;
       animation: 1.5s overlayUnderline;
       animation-fill-mode: forwards;
     }
@@ -43,7 +42,7 @@ $light: #f5f0dc;
 
   .parallax {
     &.first { 
-      background-image: url("/golden-peaks.webp");
+      background-image: url("/aerials-hor-2.jpg");
       height: 70vh;
     }
 
@@ -51,13 +50,14 @@ $light: #f5f0dc;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-image: url("/wild-west.webp");
+      background-image: url("/portraits-hor-1.jpg");
       height: 95vh;
 
       .btn-contact {
         position: relative;
         height: 55px;
         width: 240px;
+        z-index: 2;
         padding: 0 20px;
         display: flex;
         align-items: center;

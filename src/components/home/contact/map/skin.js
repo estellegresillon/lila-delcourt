@@ -7,7 +7,7 @@ export const SKIN = [
               "saturation": 36
           },
           {
-              "color": "#1b1b23"
+              "color": "#0d1319"
           },
           {
               "lightness": 20
@@ -22,7 +22,7 @@ export const SKIN = [
               "visibility": "on"
           },
           {
-              "color": "#1b1b23"
+              "color": "#0d1319"
           },
           {
               "lightness": 5
@@ -43,7 +43,7 @@ export const SKIN = [
       "elementType": "geometry.fill",
       "stylers": [
           {
-              "color": "#1b1b23"
+              "color": "#0d1319"
           }
       ]
   },
@@ -52,7 +52,7 @@ export const SKIN = [
       "elementType": "geometry.stroke",
       "stylers": [
           {
-              "color": "#1b1b23"
+              "color": "#0d1319"
           },
           {
               "lightness": 5
@@ -67,7 +67,7 @@ export const SKIN = [
       "elementType": "geometry",
       "stylers": [
           {
-              "color": "#1b1b23"
+              "color": "#0d1319"
           }
       ]
   },
@@ -76,7 +76,7 @@ export const SKIN = [
       "elementType": "geometry",
       "stylers": [
           {
-              "color": "#1b1b23"
+              "color": "#0d1319"
           }
       ]
   },
@@ -85,7 +85,7 @@ export const SKIN = [
       "elementType": "geometry.fill",
       "stylers": [
           {
-              "color": "#1b1b23"
+              "color": "#0d1319"
           },
           {
               "lightness": 5
@@ -97,7 +97,7 @@ export const SKIN = [
       "elementType": "geometry.stroke",
       "stylers": [
           {
-              "color": "#1b1b23"
+              "color": "#0d1319"
           },
           {
               "lightness": 10
@@ -112,7 +112,7 @@ export const SKIN = [
       "elementType": "geometry",
       "stylers": [
           {
-              "color": "#1b1b23"
+              "color": "#0d1319"
           },
           {
               "lightness": 5
@@ -124,7 +124,7 @@ export const SKIN = [
       "elementType": "geometry",
       "stylers": [
           {
-              "color": "#1b1b23"
+              "color": "#0d1319"
           },
           {
               "lightness": 5
@@ -136,7 +136,7 @@ export const SKIN = [
       "elementType": "geometry",
       "stylers": [
           {
-              "color": "#1b1b23"
+              "color": "#0d1319"
           }
       ]
   },
@@ -145,7 +145,7 @@ export const SKIN = [
       "elementType": "geometry",
       "stylers": [
           {
-              "color": "#1b1b23"
+              "color": "#0d1319"
           },
           {
               "lightness": 5

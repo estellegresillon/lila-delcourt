@@ -26,6 +26,7 @@ const Menu = ({ visibleRef, willDisappear, setIsComponentVisible }) => {
     >
       <div className="close-menu" onClick={() => handleClose()}>
         CLOSE
+        <div className="underline" />
       </div>
       <div 
         className="list-wrapper"
@@ -34,10 +35,22 @@ const Menu = ({ visibleRef, willDisappear, setIsComponentVisible }) => {
           animationFillMode: willDisappear || willClose ? "forwards" : ""
         }}
       >
-        <div className="list-menu-item">Nature</div>
-        <div className="list-menu-item" onClick={() => navigateToProject("/wild-west")}>Wildlife</div>
-        <div className="list-menu-item">Peaks</div>
-        <div className="list-menu-item">Volcano</div>
+        <div className="list-menu-item" onClick={() => navigateToProject("/aerials")}>
+          aerials
+          <div className="underline" />
+        </div>
+        <div className="list-menu-item" onClick={() => navigateToProject("/wild-west")}>
+          wild west
+          <div className="underline" />
+        </div>
+        <div className="list-menu-item" onClick={() => navigateToProject("/portraits")}>
+          portraits
+          <div className="underline" />
+        </div>
+        <div className="list-menu-item" onClick={() => navigateToProject("/homeland")}>
+          homeland
+          <div className="underline" />
+        </div>
       </div>
     </nav>
   );

@@ -23,10 +23,10 @@ const ScrollParallax = () => {
   return (
     <section className="section-parallax" ref={parallax}>
       <div className="parallax-left" ref={photoLeft}>
-        <img className="img-photo-left"  src="hero-1.webp" alt="nature-left" />
+        <img className="img-photo-left"  src="homeland-vert-1.jpg" alt="nature-left" />
       </div>
       <div className="parallax-right" ref={photoRight}>
-        <img className="img-photo-right" src="hero-2.webp" alt="nature-right" />
+        <img className="img-photo-right" src="homeland-vert-2.jpg" alt="nature-right" />
       </div>
     </section>
   );
