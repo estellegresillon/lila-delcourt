@@ -13,7 +13,7 @@ const Paragraph = ({ handleWaypointEnter, handleWaypointLeave }) => {
         onLeave={() => handleWaypointLeave(paragraph.current)}
       >
         <div className="paragraph-center third-section" ref={paragraph}>
-          Originally from Santiago, Chili, I found my passion in photography while working as a staff photographer 
+          Originally from Santiago, Chile, I found my passion in photography while working as a staff photographer 
           for my college newspaper. I've come a long way since then, going on to assist well known photographers 
           on the side as I pursued journalism in Washington D.C. and then in London. I kept coming back to photography 
           because I genuinely felt connected to it, and because it made me feel more connected to people and the 
