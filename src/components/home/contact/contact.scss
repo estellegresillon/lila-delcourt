@@ -40,6 +40,7 @@ $dark: #1b1b23;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-left: 2vw;
+    color: #fff;
     cursor: pointer;
     background-color: transparent;
     font-weight: 900;
@@ -48,9 +49,7 @@ $dark: #1b1b23;
     transition: 1s color ease;
 
     &:hover {
-      a {
-        color: $dark;
-      }
+      color: $dark;
       
       .btn-background {
         display: block;

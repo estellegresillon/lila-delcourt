@@ -8,6 +8,15 @@
   overflow: hidden;
   font-size: 36px;
 
+  .bg-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: auto;
+    opacity: 0.5,
+  }
+
   .project-type {
     color: #7db9b9;
   }

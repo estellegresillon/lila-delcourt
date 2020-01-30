@@ -21,6 +21,7 @@ const Contact = () => {
     <div className="contact-wrapper">
       <div className="contact-intro">For a <span className="project-type">{projectType}</span></div>
       <div className="contact-title">hello@rafaelbolano.com</div>
+      <img className="bg-right"  src="homeland-vert-3.jpg" alt="child-right" />
     </div>
   );
 };
