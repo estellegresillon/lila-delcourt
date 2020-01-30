@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import "./project.scss";
 import "./project-mobile.scss";
-import { DESCRIPTION } from "./constant";
+import { DESCRIPTION } from "./constants";
 
 const Project = ({ location }) => {
   const [title, setTitle] = useState("");
