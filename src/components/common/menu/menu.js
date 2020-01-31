@@ -15,7 +15,7 @@ const Menu = ({ visibleRef, willDisappear, setIsComponentVisible }) => {
   const navigateToProject = project => {
     handleClose();
     setTimeout(() => {
-      window.location.assign(project);
+      window.location.assign(`#${project}`);
     }, 1000);
   }
 
