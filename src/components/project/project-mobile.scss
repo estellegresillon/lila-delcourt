@@ -1,5 +1,19 @@
 @media screen and (max-width: 728px) {
   .layout-project {
+
+    .parallax.first h1 {
+      font-size: 52px;
+    }
+
+    .section-presentation {
+      height: 100%;
+      padding: 10vh 0;
+    }
+
+    .parallax.third a span {
+      display: none;
+    }
+
     .section-photos, .section-photos-cta {
       flex-direction: column;
       width: 100%;
@@ -15,6 +29,10 @@
           width: 100%;
           margin: 0;
         }
+      }
+
+      .photo-right img, .photo-center img {
+        display: none;
       }
     }
   }

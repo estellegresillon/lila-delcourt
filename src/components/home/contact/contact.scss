@@ -70,6 +70,12 @@ $dark: #1b1b23;
   }
 }
 
+@media screen and (max-width: 728px) {
+  .section-contact {
+    height: 100%;
+  }
+}
+
 @keyframes backgroundCover {
   from {
     width: 0;

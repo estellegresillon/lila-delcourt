@@ -88,6 +88,16 @@ nav {
   background-color: rgba(0,0,0,0.7);
 }
 
+@media screen and (max-width: 728px) {
+  nav {
+    width: 60vw;
+
+    .list-wrapper .list-menu-item {
+      font-size: 16px;
+    }
+  }
+}
+
 @keyframes slideFromRight {
   from { 
     width: 0%;

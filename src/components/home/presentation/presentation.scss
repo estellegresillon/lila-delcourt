@@ -27,3 +27,10 @@
     }
   }
 }
+
+@media screen and (max-width: 728px) {
+  .layout-home .section-presentation {
+    height: 100%;
+    padding: 10vh 0;
+  }
+}

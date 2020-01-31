@@ -16,7 +16,7 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     background-color: rgba(0,0,0,0.5);
   }
 
@@ -80,6 +80,26 @@
       transition: 2s all ease;
 
       &:hover { bottom: 7vh; }
+    }
+  }
+}
+
+@media screen and (max-width: 728px) {
+  .hero-scene {
+    .title {
+      margin-left: 10vw;
+      line-height: 32px;
+      font-size: 21px;
+      width: 80%;
+    }
+
+    .title-big {
+      font-size: 52px;
+      line-height: 45px;
+    }
+    
+    .hero-scene-img {
+      display: none;
     }
   }
 }

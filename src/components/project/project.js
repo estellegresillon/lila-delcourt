@@ -118,13 +118,13 @@ const Project = ({ location }) => {
       <div className="parallax third" style={{ backgroundImage: `url('${projectName}-hor-2.jpg')` }}>
         <Link className="prev-link" to={previousProject}>
           <i className="fas fa-chevron-left" />
-          Previous project
+          <span>Previous project</span>
         </Link>
         <Link className="home-link" to="/">
           Go back
         </Link>
         <Link className="next-link" to={nextProject}>
-          Next project
+          <span>Next project</span>
           <i className="fas fa-chevron-right" />
         </Link>
       </div>
