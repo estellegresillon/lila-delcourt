@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { HashRouter, Route } from 'react-router-dom'
 
 import './index.css';
 import Header from "./components/common/header";
@@ -10,7 +10,7 @@ import Contact from "./components/contact";
 import Project from "./components/project";
 
 const App = () => (
-  <Router>
+  <HashRouter basename='/'>
     <React.Fragment>
       <Grid />
       <Header />
@@ -21,7 +21,7 @@ const App = () => (
       <Route exact path="/portraits" component={Project} />
       <Route exact path="/homeland" component={Project} />
     </React.Fragment>
-  </Router>
+  </HashRouter>
 );
 
 ReactDOM.render(<App />, document.getElementById('root'));
