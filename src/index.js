@@ -14,12 +14,12 @@ const App = () => (
     <React.Fragment>
       <Grid />
       <Header />
-      <Route exact path="/" component={Home} />
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/wild-west" component={Project} />
       <Route exact path="/aerials" component={Project} />
       <Route exact path="/portraits" component={Project} />
       <Route exact path="/homeland" component={Project} />
+      <Route exact path="/" component={Home} />
     </React.Fragment>
   </BrowserRouter>
 );

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { withRouter } from "react-router-dom";
 
 import "./menu.scss";
 
-const Menu = ({ visibleRef, willDisappear, setIsComponentVisible }) => {
+const Menu = ({ visibleRef, willDisappear, setIsComponentVisible, history }) => {
   const [willClose, setWillClose] = useState(false);
 
   const handleClose = () => {
@@ -15,7 +16,7 @@ const Menu = ({ visibleRef, willDisappear, setIsComponentVisible }) => {
   const navigateToProject = project => {
     handleClose();
     setTimeout(() => {
-      window.location.assign(`${project}`);
+      history.push(project);
     }, 1000);
   }
 
@@ -56,4 +57,4 @@ const Menu = ({ visibleRef, willDisappear, setIsComponentVisible }) => {
   );
 };
 
-export default Menu;
+export default withRouter(Menu);
