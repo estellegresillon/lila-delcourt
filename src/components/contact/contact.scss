@@ -22,7 +22,7 @@
   }
 
   .contact-title {
-    font-size: 72px;
+    font-size: 52px;
     color: #7db9b9;
     text-decoration: underline;
     cursor: pointer;
@@ -32,6 +32,10 @@
     &:hover {
       color: #afdddd;
     }
+  }
+
+  .contact-intro {
+    z-index: 100;
   }
 }
 

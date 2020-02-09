@@ -1,5 +1,8 @@
 @media screen and (max-width: 728px) {
   .layout-project {
+    .parallax.first, .parallax.second, .parallax.third {
+      background-size: cover !important;
+    }
 
     .parallax.first h1 {
       font-size: 52px;

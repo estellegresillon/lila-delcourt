@@ -41,9 +41,12 @@ $dark: #0d1319;
   }
 
   .parallax {
+    width: 100vw;
+
     &.first { 
       background-image: url("/aerials-hor-2.jpg");
       height: 70vh;
+      background-size: cover !important;
     }
 
     &.second { 
@@ -51,6 +54,7 @@ $dark: #0d1319;
       align-items: center;
       justify-content: center;
       background-image: url("/portraits-hor-1.jpg");
+      background-size: cover !important;
       height: 95vh;
 
       .btn-contact {

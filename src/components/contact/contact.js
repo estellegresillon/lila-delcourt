@@ -12,7 +12,7 @@ const Contact = () => {
     const type = setInterval(function () {
       count++;
       setProjectType(WORDS_ARRAY[count % WORDS_ARRAY.length]);
-    }, 800);
+    }, 1500);
 
     return () => clearInterval(type);
   }, []);

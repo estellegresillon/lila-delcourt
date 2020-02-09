@@ -83,9 +83,7 @@ const Project = ({ location }) => {
     <div className="layout-project">
       <div 
         className="parallax first" 
-        style={{ 
-          background: `linear-gradient(to bottom, rgba(0,0,0,.5) 0%, rgba(0,0,0,.5) 100%), url('${projectName}-hor-1.jpg')`
-        }}>
+        style={{ background: `linear-gradient(to bottom, rgba(0,0,0,.5) 0%, rgba(0,0,0,.5) 100%), url('${projectName}-hor-1.jpg')` }}>
         <h1>{title}</h1>
         <h2>- {year} -</h2>
       </div>
